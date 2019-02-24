@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Improve the robustness of TSDF-based SLAM"
+date:   2018-09-30 18:30:11
+categories: jekyll update
+img: pointu3d/teasure.png
+categories: [one, two]
+---
+# Introduction
+The research was done in an five months project. The main goal of this project is to build a SLAM system which is robust to tracking-loss, drifting and able to perform detail object-level reconstruction. In the peroid I used the sliding windows and keyframes methods [1] to handle the tracking loss and relocalization respectively. Moreover, a object centroid tracking system was added to allow user to take certain object during reconstruction, so as to reconstruct the whole model (for example, the bottom part).
+
+In this video you can see that: <br />
+First objects are incrementally segmented [2], <br />
+Second, the tracking is switch from frame-to-model to frame-to-target-object. <br />
+Thrid, the display switched between segmented classes, normal distribution and RGB image.
+<iframe width="420" height="315" src="../images/pointu3d/demo.mp4" frameborder="0" allowfullscreen></iframe>
+
+
+
+## Reference
+[1] Engel, Jakob, Vladlen Koltun, and Daniel Cremers. "Direct sparse odometry." IEEE transactions on pattern analysis and machine intelligence 40.3 (2018): 611-625.
+[2] Tateno, Keisuke, Federico Tombari, and Nassir Navab. "Real-time and scalable incremental segmentation on dense slam." 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2015.
+
+[demo]: /../images/pointu3d/demo.mp4 "demo"
